@@ -61,6 +61,7 @@ header .nav {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   gap: 10px;
+  color: #7e7878;
 }
 
 header .nav a {
