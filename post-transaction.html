@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Transaction | Income-Expenses Manager</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+</head>
+<body>
+    <header>
+        <h1>Income-Expenses Manager</h1>
+        <div class="nav">
+            <a href="post-transaction.html" title="Post transaction">
+                <i class="fas fa-plus"></i>
+            </a>
+            <a href="history.html" title="History">
+                <i class="fas fa-history"></i>
+            </a>
+            <a href="#" title="Logout" id="logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        
+        <h4 class="balance">Balance: &#8358; <span>-- --</span></h4>
+
+        <div class="panel">
+            <div class="panel__heading">
+                <h3 class="panel__title">Post Transaction</h3><hr>
+            </div>
+            <div class="panel__body">
+                <form action="#" method="POST" id="post-trans-form">
+                    <input type="number" name="amount" placeholder="Amount" id="amount">
+                    <select name="type" id="type">
+                        <option value="">Type</option>
+                        <option value="Db">Db</option>
+                        <option value="Cr">Cr</option>
+                    </select>
+                    <textarea name="purpose" id="purpose" cols="30" rows="5" placeholder="Purpose"></textarea>
+                    <hr>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script/post-transaction.js"></script>
+    <script src="script/logout.js"></script>
+</body>
+</html>

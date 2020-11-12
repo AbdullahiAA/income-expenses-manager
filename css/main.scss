@@ -1,0 +1,160 @@
+$primaryColor: rgb(38, 163, 240);
+$mainFont: Verdana, Geneva, Tahoma, sans-serif;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(126, 120, 120);
+    font-family: $mainFont;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+hr {
+    height: 0;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+header {
+    padding: 10px 10px 10px 15px;
+    height: 70px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0px 26px -6px darkgrey;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    h1 {
+        font-size: .95em;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+
+        a {
+            padding: 5px 7px;
+            border-radius: 50%;
+            background-color: #fff;
+
+            i {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+.wrapper {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    top: 70px;
+    z-index: 0;
+
+    .balance {
+        text-align: right;
+        font-weight: lighter;
+        color: darkgray;
+        text-transform: initial;
+    }
+}
+
+form {
+    input, select, textarea {
+        background-color: transparent;
+        color: #0009;
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid $primaryColor;
+        padding: 15px;
+        font-size: 16px;
+        transition-duration: .3s;
+        transition-property: box-shadow;
+        font-family: $mainFont;
+
+        &:hover, &:focus {
+            box-shadow: 1px 1px 5px -1px $primaryColor;
+        }
+
+        &::placeholder  {
+            color: #0009;
+        }
+    }
+
+    textarea {
+        margin-bottom: 0;
+    }
+
+    button {
+        padding: 15px 45px;
+        font-size: 1em;
+        text-transform: uppercase;
+        background-color: $primaryColor;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: .5px;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        transition-duration: .3s;
+        transition-property: background-color;
+        font-family: $mainFont;
+
+        &:hover, &:focus {
+            background-color: rgba($primaryColor, .7);
+        }
+    }
+}
+
+.panel {
+    border: 1px solid $primaryColor;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px -15px darkgrey;
+
+}
+
+.panel__title {
+    color: #0008;
+}
+
+.error {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(221, 49, 49);
+}
+
+.success {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(49, 221, 175);
+}

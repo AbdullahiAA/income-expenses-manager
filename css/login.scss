@@ -1,0 +1,23 @@
+$primaryColor: rgb(38, 163, 240);
+
+.login-panel {
+    border: 1px solid $primaryColor;
+    box-shadow: 5px 5px 25px -15px darkgrey;
+    
+    .login-panel__heading {
+        background-color: $primaryColor;
+        min-height: 60px;
+        padding: 6px 0;
+
+        h1 {
+            line-height: 2;
+            margin: 0;
+            color: #fff;
+        }
+    }
+
+    .login-panel__body {
+        background-color: #fff;
+        padding: 20px;
+    }
+}

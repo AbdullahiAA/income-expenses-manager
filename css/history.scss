@@ -1,0 +1,50 @@
+table {
+    border-spacing: 0;
+    border: 1px solid lightgray;
+    width: 100%;
+
+    thead tr th,    
+    tbody tr td {
+        padding: 10px 3px;
+        border: 1px solid lightgray;
+        font-size: .8em;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 30%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 35%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+        width: 10%;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+        width: 25%;
+    }
+}
+
+.panel__body {
+    margin-bottom: 10px;
+}
+
+.panel__footer {
+    margin-top: 10px;
+    padding: 20px;
+
+    .clear-history {
+        text-decoration: none;
+        background-color: rgb(192, 47, 47);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+}

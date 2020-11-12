@@ -1,0 +1,185 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #7e7878;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 1.25em;
+}
+
+hr {
+  height: 0;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+header {
+  padding: 10px 10px 10px 15px;
+  height: 70px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 26px -6px darkgrey;
+          box-shadow: 0px 0px 26px -6px darkgrey;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+header h1 {
+  font-size: .95em;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 10px;
+}
+
+header .nav a {
+  padding: 5px 7px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+header .nav a i {
+  font-size: 1.1em;
+}
+
+.wrapper {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  top: 70px;
+  z-index: 0;
+}
+
+.wrapper .balance {
+  text-align: right;
+  font-weight: lighter;
+  color: darkgray;
+  text-transform: initial;
+}
+
+form input, form select, form textarea {
+  background-color: transparent;
+  color: #0009;
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #26a3f0;
+  padding: 15px;
+  font-size: 16px;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form input:hover, form input:focus, form select:hover, form select:focus, form textarea:hover, form textarea:focus {
+  -webkit-box-shadow: 1px 1px 5px -1px #26a3f0;
+          box-shadow: 1px 1px 5px -1px #26a3f0;
+}
+
+form input::-webkit-input-placeholder, form select::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  color: #0009;
+}
+
+form input:-ms-input-placeholder, form select:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  color: #0009;
+}
+
+form input::-ms-input-placeholder, form select::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  color: #0009;
+}
+
+form input::placeholder, form select::placeholder, form textarea::placeholder {
+  color: #0009;
+}
+
+form textarea {
+  margin-bottom: 0;
+}
+
+form button {
+  padding: 15px 45px;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: #26a3f0;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: .5px;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form button:hover, form button:focus {
+  background-color: rgba(38, 163, 240, 0.7);
+}
+
+.panel {
+  border: 1px solid #26a3f0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 25px -15px darkgrey;
+          box-shadow: 5px 5px 25px -15px darkgrey;
+}
+
+.panel__title {
+  color: #0008;
+}
+
+.error {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #dd3131;
+}
+
+.success {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #31ddaf;
+}
+/*# sourceMappingURL=main.css.map */
