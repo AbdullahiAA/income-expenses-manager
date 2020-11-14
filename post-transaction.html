@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Post Transaction | Income-Expenses Manager</title>
+
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -12,6 +14,7 @@
 <body>
     <header>
         <h1>Income-Expenses Manager</h1>
+        
         <div class="nav">
             <a href="post-transaction.html" title="Post transaction">
                 <i class="fas fa-plus"></i>
@@ -27,7 +30,9 @@
 
     <div class="wrapper">
         
-        <h4 class="balance">Balance: &#8358; <span>-- --</span></h4>
+        <h4 class="balance">
+            Balance: &#8358; <span>-- --</span>
+        </h4>
 
         <div class="panel">
             <div class="panel__heading">
@@ -35,19 +40,20 @@
             </div>
             <div class="panel__body">
                 <form action="#" method="POST" id="post-trans-form">
-                    <input type="number" name="amount" placeholder="Amount" id="amount">
+                    <input type="number" placeholder="Amount" id="amount">
+
                     <select name="type" id="type">
                         <option value="">Type</option>
-                        <option value="Db">Db</option>
                         <option value="Cr">Cr</option>
+                        <option value="Db">Db</option>
                     </select>
+
                     <textarea name="purpose" id="purpose" cols="30" rows="5" placeholder="Purpose"></textarea>
                     <hr>
                     <button type="submit">Post</button>
                 </form>
             </div>
         </div>
-
     </div>
 
 

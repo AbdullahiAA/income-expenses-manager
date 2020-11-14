@@ -85,20 +85,20 @@ header {
 
 form {
     input, select, textarea {
+        font-family: $mainFont;
+        font-size: 16px;
         background-color: transparent;
         color: #0009;
         display: block;
         width: 100%;
         min-height: 50px;
         margin-bottom: 40px;
-        border-radius: 5px;
+        padding: 15px;
         outline: none;
         border: 1px solid $primaryColor;
-        padding: 15px;
-        font-size: 16px;
+        border-radius: 5px;
         transition-duration: .3s;
         transition-property: box-shadow;
-        font-family: $mainFont;
 
         &:hover, &:focus {
             box-shadow: 1px 1px 5px -1px $primaryColor;
@@ -114,19 +114,21 @@ form {
     }
 
     button {
-        padding: 15px 45px;
+        font-family: $mainFont;
         font-size: 1em;
+        font-weight: bold;
         text-transform: uppercase;
+        letter-spacing: .5px;
+        
         background-color: $primaryColor;
         color: #fff;
-        font-weight: bold;
-        letter-spacing: .5px;
-        border-radius: 5px;
-        border: 0;
+        padding: 15px 45px;
         outline: 0;
+        border: 0;
+        border-radius: 5px;
+        
         transition-duration: .3s;
         transition-property: background-color;
-        font-family: $mainFont;
 
         &:hover, &:focus {
             background-color: rgba($primaryColor, .7);
@@ -136,10 +138,9 @@ form {
 
 .panel {
     border: 1px solid $primaryColor;
-    padding: 10px 15px;
     border-radius: 5px;
+    padding: 10px 15px;
     box-shadow: 5px 5px 25px -15px darkgrey;
-
 }
 
 .panel__title {

@@ -4,5 +4,4 @@ document.querySelector('#logout').addEventListener('click', (e) => {
     localStorage.setItem('loggedIn', false)
 
     location.assign('index.html')
-
 })

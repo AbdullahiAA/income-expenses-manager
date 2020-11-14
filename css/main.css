@@ -91,24 +91,24 @@ header .nav a i {
 }
 
 form input, form select, form textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
   background-color: transparent;
   color: #0009;
   display: block;
   width: 100%;
   min-height: 50px;
   margin-bottom: 40px;
-  border-radius: 5px;
+  padding: 15px;
   outline: none;
   border: 1px solid #26a3f0;
-  padding: 15px;
-  font-size: 16px;
+  border-radius: 5px;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
   transition-property: box-shadow, -webkit-box-shadow;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 form input:hover, form input:focus, form select:hover, form select:focus, form textarea:hover, form textarea:focus {
@@ -137,21 +137,21 @@ form textarea {
 }
 
 form button {
-  padding: 15px 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
+  font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: .5px;
   background-color: #26a3f0;
   color: #fff;
-  font-weight: bold;
-  letter-spacing: .5px;
-  border-radius: 5px;
-  border: 0;
+  padding: 15px 45px;
   outline: 0;
+  border: 0;
+  border-radius: 5px;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 form button:hover, form button:focus {
@@ -160,8 +160,8 @@ form button:hover, form button:focus {
 
 .panel {
   border: 1px solid #26a3f0;
-  padding: 10px 15px;
   border-radius: 5px;
+  padding: 10px 15px;
   -webkit-box-shadow: 5px 5px 25px -15px darkgrey;
           box-shadow: 5px 5px 25px -15px darkgrey;
 }

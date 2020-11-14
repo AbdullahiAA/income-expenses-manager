@@ -41,11 +41,11 @@ table td:nth-child(4) {
 }
 
 .panel__footer .clear-history {
+  font-size: 14px;
   text-decoration: none;
   background-color: #c02f2f;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 14px;
 }
 /*# sourceMappingURL=history.css.map */

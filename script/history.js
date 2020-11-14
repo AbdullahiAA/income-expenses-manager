@@ -4,13 +4,12 @@ displayBalance()
 var historyTbl = document.querySelector('#historyTable')
 var transactions = getTransactions()
 
-
 // Show History...
 if (transactions.length == 0) {
     historyTbl.before('No history is recorded')
     historyTbl.remove()
 
-    // Removing the clear history button
+    // Removing the panel footer that contains the "Clear history" button...
     document.querySelector('.panel__footer').remove()
 } else {
     let tbody = historyTbl.children[1]
@@ -26,7 +25,7 @@ if (transactions.length == 0) {
         tdTime.innerHTML = `${transaction.time.dayName}<br>${transaction.time.date}<br>${transaction.time.time}`
         tdPurpose.textContent = transaction.purpose
         tdType.textContent = transaction.type
-        tdAmount.innerHTML = '&#8358; ' + transaction.amount
+        tdAmount.innerHTML = `&#8358; ${transaction.amount}`
 
         tr.append(tdTime)
         tr.append(tdPurpose)
@@ -42,7 +41,7 @@ if (transactions.length == 0) {
 document.querySelector('#clear-history').addEventListener('click', (e) => {
     e.preventDefault()
 
-    let confirmClearing = confirm('Are you sure that you want to clear all the history record(s)?\n\nNOTE: The balance will be reset to ₦ 0');
+    let confirmClearing = confirm('\nAre you sure that you want to clear all the history record(s)?\n\nNOTE: The balance will be reset to ₦ 0');
 
     if (confirmClearing) {
         let transactions = []
@@ -55,9 +54,8 @@ document.querySelector('#clear-history').addEventListener('click', (e) => {
 
         displayBalance()
 
-        // Removing the clear history button
+        // Removing the clear history button...
         document.querySelector('.panel__footer').remove()
-
     }
 })
 

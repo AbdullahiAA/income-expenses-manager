@@ -15,8 +15,7 @@ document.querySelector('#post-trans-form').addEventListener('submit', (e) => {
         error = 'All fields are required'
     } else if (type === 'Db' && amount > balance) {
         error = 'Transaction denied. Amount is greater than your current balance'
-    }
-    else {
+    } else {
         postTheTransaction(amount, type, purpose)
     }
 
@@ -25,16 +24,18 @@ document.querySelector('#post-trans-form').addEventListener('submit', (e) => {
     }
 })
 
+
+// Functions...
 function showError(error) {
     removePrevMsgTag('.success')
 
-    var msgTag = document.querySelector('.error')
+    let msgTag = document.querySelector('.error')
     
     if (msgTag === null) {
-        var amountTag = document.querySelector('#amount')
-        var msgTag = document.createElement('p')
-
+        msgTag = document.createElement('p')
         msgTag.className = 'error'
+        
+        let amountTag = document.querySelector('#amount')
         amountTag.before(msgTag)
     }
 
@@ -49,19 +50,12 @@ function showSuccessMsg() {
     if (msgTag === null) {
         msgTag = document.createElement('p')
         msgTag.className = 'success'
+        
+        let amountTag = document.querySelector('#amount')
+        amountTag.before(msgTag)
     }
     
-    let amountTag = document.querySelector('#amount')
-    amountTag.before(msgTag)
-
-    msgTag.textContent = 'Transaction posted successfully.'
-}
-
-function removePrevMsgTag(ClassName) {
-    let theTag = document.querySelector(ClassName)
-    if (theTag !== null) {
-        theTag.remove()
-    }
+    msgTag.textContent = 'Transaction posted successfully'
 }
 
 function getBalance() {
@@ -107,20 +101,28 @@ function postTheTransaction(amount, type, purpose) {
 
     transactions.unshift(newTransaction)
 
+    // Save transaction to the localStorage...
     transactions = JSON.stringify(transactions)
     localStorage.setItem('transactions', transactions)
 
+    // Update the total balance...
     if (type === 'Cr') {
         balance += Number(amount)
     } else {
         balance -= Number(amount)
     }
 
+    // Save balance to the localStorage...
     localStorage.setItem('balance', balance)
     displayBalance()
 
     showSuccessMsg()
     clearFormFields()
+}
+
+function removePrevMsgTag(ClassName) {
+    let theTag = document.querySelector(ClassName)
+    if (theTag !== null) theTag.remove()
 }
 
 function clearFormFields() {
@@ -139,6 +141,7 @@ function redirectIfNotLoggedIn() {
 
 function getTime() {
     let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
     let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 
     let date = new Date()
@@ -151,7 +154,7 @@ function getTime() {
 
     
     let hour = date.getHours()
-    var __hour = hour
+    let __hour = hour
     if (hour > 12) {__hour = hour - 12}
     
     let minute = date.getMinutes()
