@@ -1,8 +1,10 @@
 redirectIfLoggedIn()
 
 document.querySelector('#login-form').addEventListener('submit', (e) => {
+    // Preventing the default submittion from the form...
     e.preventDefault()
 
+    // Getting the logIn details from the client side...
     const username = document.querySelector('#username').value.trim()
     const password = document.querySelector('#password').value
 
@@ -11,17 +13,18 @@ document.querySelector('#login-form').addEventListener('submit', (e) => {
     if (username === '' && password === '') {
         error = 'Please input your login details'
     } else if (username === '' || password === '') {
-        error = 'Please fill both fields'
+        error = 'Both fields are required'
     } else if (username === 'admin' && password === 'tripleal2k') {
+        // Process the logIn function...
         logIn()
     } else {
-        error = 'Incorrect login details'
+        error = 'Incorrect login details, please try again'
     }
 
+    // Display the error to the user is there is any...
     if (error !== '') {
         showError(error)
     }
-
 })
 
 // Functions...
