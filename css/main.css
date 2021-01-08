@@ -144,7 +144,9 @@ form button {
   letter-spacing: .5px;
   background-color: #26a3f0;
   color: #fff;
+  width: 170px;
   padding: 15px 45px;
+  margin-top: 10px;
   outline: 0;
   border: 0;
   border-radius: 5px;
