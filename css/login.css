@@ -20,4 +20,13 @@
   background-color: #fff;
   padding: 20px;
 }
+
+.login-panel .login-panel__body #demo-login {
+  background-color: darkcyan;
+  padding: 15px 20px;
+}
+
+.login-panel .login-panel__body #demo-login:hover, .login-panel .login-panel__body #demo-login:focus {
+  background-color: rgba(0, 139, 139, 0.7);
+}
 /*# sourceMappingURL=login.css.map */

@@ -1,5 +1,10 @@
 redirectIfLoggedIn()
 
+// Processing the demo login...
+document.getElementById('demo-login').addEventListener('click', () => {
+    logIn()
+})
+
 document.querySelector('#login-form').addEventListener('submit', (e) => {
     // Preventing the default submittion from the form...
     e.preventDefault()

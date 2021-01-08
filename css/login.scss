@@ -19,5 +19,14 @@ $primaryColor: rgb(38, 163, 240);
     .login-panel__body {
         background-color: #fff;
         padding: 20px;
+
+        #demo-login {  
+            background-color: darkcyan;
+            padding: 15px 20px;
+    
+            &:hover, &:focus {
+                background-color: rgba(darkcyan, .7);
+            }
+        }
     }
 }
