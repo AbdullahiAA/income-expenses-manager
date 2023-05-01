@@ -1,164 +1,203 @@
 $primaryColor: rgb(38, 163, 240);
 $mainFont: Verdana, Geneva, Tahoma, sans-serif;
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
-    color: rgb(126, 120, 120);
-    font-family: $mainFont;
-    max-width: 600px;
-    margin: 0 auto;
+  color: rgb(126, 120, 120);
+  font-family: $mainFont;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
 }
 
 h1 {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 hr {
-    height: 0;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin: 20px 0;
+  height: 0;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
 }
 
 header {
-    padding: 10px 10px 10px 15px;
-    height: 70px;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0px 0px 26px -6px darkgrey;
+  padding: 10px 10px 10px 15px;
+  height: 70px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 0px 26px -6px darkgrey;
 
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  h1 {
+    font-size: 0.95em;
+  }
+
+  .nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: nowrap;
+    gap: 10px;
+    color: rgb(126, 120, 120);
 
-    h1 {
-        font-size: .95em;
+    a {
+      padding: 5px 7px;
+      border-radius: 50%;
+      background-color: #fff;
+
+      i {
+        font-size: 1.1em;
+      }
     }
-
-    .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 10px;
-        color: rgb(126, 120, 120);
-
-        a {
-            padding: 5px 7px;
-            border-radius: 50%;
-            background-color: #fff;
-
-            i {
-                font-size: 1.1em;
-            }
-        }
-    }
+  }
 }
 
 .wrapper {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    position: relative;
-    top: 70px;
-    z-index: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  top: 70px;
+  z-index: 0;
 
-    .balance {
-        text-align: right;
-        font-weight: lighter;
-        color: rgb(114, 114, 114);
-        text-transform: initial;
+  .balance {
+    text-align: right;
+    font-weight: lighter;
+    color: rgb(114, 114, 114);
+    text-transform: initial;
+    font-weight: 600 !important;
+  }
+
+  .inflow-outflow-container {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      margin-top: 0;
     }
+  }
 }
 
 form {
-    input, select, textarea {
-        font-family: $mainFont;
-        font-size: 16px;
-        background-color: transparent;
-        color: #0009;
-        display: block;
-        width: 100%;
-        min-height: 50px;
-        margin-bottom: 40px;
-        padding: 15px;
-        outline: none;
-        border: 1px solid $primaryColor;
-        border-radius: 5px;
-        transition-duration: .3s;
-        transition-property: box-shadow;
+  input,
+  select,
+  textarea {
+    font-family: $mainFont;
+    font-size: 16px;
+    background-color: transparent;
+    color: #0009;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 40px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid $primaryColor;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
 
-        &:hover, &:focus {
-            box-shadow: 1px 1px 5px -1px $primaryColor;
-        }
-
-        &::placeholder  {
-            color: #0009;
-        }
+    &:hover,
+    &:focus {
+      box-shadow: 1px 1px 5px -1px $primaryColor;
     }
 
-    textarea {
-        margin-bottom: 0;
+    &::placeholder {
+      color: #0009;
     }
+  }
 
-    button {
-        font-family: $mainFont;
-        font-size: 1em;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: .5px;
-        
-        background-color: $primaryColor;
-        color: #fff;
-        width: 170px;
-        padding: 15px 45px;
-        margin-top: 10px;
-        outline: 0;
-        border: 0;
-        border-radius: 5px;
-        
-        transition-duration: .3s;
-        transition-property: background-color;
+  textarea {
+    margin-bottom: 0;
+  }
 
-        &:hover, &:focus {
-            background-color: rgba($primaryColor, .7);
-        }
+  button {
+    font-family: $mainFont;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    background-color: $primaryColor;
+    color: #fff;
+    width: 170px;
+    padding: 15px 45px;
+    margin-top: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+
+    transition-duration: 0.3s;
+    transition-property: background-color;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($primaryColor, 0.7);
     }
+  }
 }
 
 .panel {
-    border: 1px solid $primaryColor;
-    border-radius: 5px;
-    padding: 10px 15px;
-    box-shadow: 5px 5px 25px -15px darkgrey;
+  margin-bottom: 24px;
+  border: 1px solid $primaryColor;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: 5px 5px 25px -15px darkgrey;
 }
 
 .panel__title {
-    color: #0008;
+  color: #0008;
 }
 
 .error {
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: rgb(221, 49, 49);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgb(221, 49, 49);
 }
 
 .success {
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: rgb(49, 221, 175);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgb(49, 221, 175);
+}
+
+.credit {
+  color: rgb(49, 221, 175) !important;
+  font-weight: 600 !important;
+}
+
+.debit {
+  color: rgb(221, 49, 49) !important;
+  font-weight: 600 !important;
+}
+
+.today {
+  color: #6a1b4d !important;
+  font-weight: 600 !important;
 }

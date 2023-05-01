@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,19 @@
     <title>Post Transaction | Income-Expenses Manager</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/history.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 
 </head>
+
 <body>
     <header>
         <h1>Income-Expenses Manager</h1>
-        
+
         <div class="nav">
             <a href="post-transaction.html" title="Post transaction">
                 <i class="fas fa-plus"></i>
@@ -29,30 +35,71 @@
     </header>
 
     <div class="wrapper">
-        
+
         <h4 class="balance">
             Balance: &#8358; <span>-- --</span>
         </h4>
 
+        <h4 class="balance today">
+            Amount Spent Today: &#8358; <span>-- --</span>
+        </h4>
+
+        <div class="inflow-outflow-container">
+            <h4 class="balance credit inflow">
+                Total Inflow: &#8358; <span>-- --</span>
+            </h4>
+
+            <h4 class="balance debit outflow">
+                Total Outflow: &#8358; <span>-- --</span>
+            </h4>
+        </div>
+
+
+
         <div class="panel">
             <div class="panel__heading">
-                <h3 class="panel__title">Post Transaction</h3><hr>
+                <h3 class="panel__title">Post Transaction</h3>
+                <hr>
             </div>
             <div class="panel__body">
                 <form action="#" method="POST" id="post-trans-form">
-                    <input type="number" placeholder="Amount" id="amount">
+                    <input type="number" placeholder="Amount" id="amount" required>
 
-                    <select name="type" id="type">
+                    <select name="type" id="type" required>
                         <option value="">Type</option>
                         <option value="Cr">Cr</option>
                         <option value="Db">Db</option>
                     </select>
 
-                    <textarea name="purpose" id="purpose" cols="30" rows="5" placeholder="Purpose"></textarea>
+                    <textarea name="purpose" id="purpose" cols="30" rows="5" placeholder="Purpose" required></textarea>
                     <hr>
                     <button type="submit">Post</button>
                 </form>
             </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel__heading">
+                <h3 class="panel__title">Recent Transactions</h3>
+                <hr>
+            </div>
+            <div class="panel__body">
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>TIME</th>
+                            <th>PURPOSE</th>
+                            <th>TYPE</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- The contents will be loaded up with JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+
         </div>
     </div>
 
@@ -60,4 +107,5 @@
     <script src="script/post-transaction.js"></script>
     <script src="script/logout.js"></script>
 </body>
+
 </html>
