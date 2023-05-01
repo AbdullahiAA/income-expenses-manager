@@ -80,15 +80,6 @@ header .nav a i {
   text-transform: initial;
   font-weight: 600 !important;
 }
-.wrapper .inflow-outflow-container {
-  display: flex;
-  gap: 8px;
-  justify-content: space-between;
-  align-items: center;
-}
-.wrapper .inflow-outflow-container h4 {
-  margin-top: 0;
-}
 
 form input,
 form select,
