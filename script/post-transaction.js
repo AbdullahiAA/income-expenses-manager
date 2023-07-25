@@ -137,18 +137,32 @@ function getTransactions() {
 
 function displayTodaysTransactions() {
   var historyTbl = document.querySelector("#historyTable");
-  var todaysTransactions = getTransactions();
+  var transactions = getTransactions();
   const today = getTime();
 
-  todaysTransactions = todaysTransactions.filter(
+  const todaysTransactions = transactions.filter(
     (transaction) => transaction.time.date === today.date
   );
 
   // Show History...
   if (todaysTransactions.length == 0) {
-    historyTbl.before("No transaction yet");
-    historyTbl.remove();
+    // Hide the transaction table if there are no recent transactions
+    historyTbl.style.display = "none";
+
+    // Show no transaction message
+    let noTransTag = document.createElement("p");
+    noTransTag.className = "noTransTag";
+    noTransTag.textContent = "No transaction yet";
+    historyTbl.before(noTransTag);
   } else {
+    // Hide no transaction message
+    let noTransTag = document.querySelector(".noTransTag");
+    if (noTransTag !== null) noTransTag.remove();
+
+    // Show transaction table
+    historyTbl.style.display = "table";
+
+    // Build the table
     let tbody = historyTbl.children[1];
 
     tbody.innerHTML = null;
@@ -168,7 +182,7 @@ function displayTodaysTransactions() {
         transaction.amount
       }`;
 
-      // Styling the debit from credit
+      // Styling the debit and the credit records
       tdType.classList.add(transaction.type === "Cr" ? "credit" : "debit");
       tdAmount.classList.add(transaction.type === "Cr" ? "credit" : "debit");
 
