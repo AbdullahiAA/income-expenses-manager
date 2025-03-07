@@ -133,16 +133,43 @@ function getTotalSpentToday() {
   return Number(total);
 }
 
+function getMonthAndYear(date) {
+  const [day, month, year] = date.split("-");
+
+  return `${month}${year}`;
+}
+
+function getTotalSpentThisMonth() {
+  let transactions = getTransactions();
+  const today = getTime();
+  const thisMonth = getMonthAndYear(today.date);
+  let total = 0;
+
+  if (transactions.length > 0) {
+    total = transactions
+      .filter(
+        (transaction) =>
+          transaction.type === "Db" &&
+          getMonthAndYear(transaction.time.date) === thisMonth
+      )
+      .reduce((acc, item) => Number(acc) + Number(item.amount), 0);
+  }
+
+  return Number(total);
+}
+
 function displayBalance() {
   let balanceTag = document.querySelector(".balance span");
   let inflowTag = document.querySelector(".inflow span");
   let outflowTag = document.querySelector(".outflow span");
   let spentTodayTag = document.querySelector(".today span");
+  let spentThisMonthTag = document.querySelector(".thisMonth span");
 
   balanceTag.textContent = getBalance();
   inflowTag.textContent = getTotalInflow();
   outflowTag.textContent = getTotalOutflow();
   spentTodayTag.textContent = getTotalSpentToday();
+  spentThisMonthTag.textContent = getTotalSpentThisMonth();
 }
 
 function redirectIfNotLoggedIn() {

@@ -3,29 +3,24 @@ table {
   border: 1px solid lightgray;
   width: 100%;
 }
-
 table thead tr th,
 table tbody tr td {
   padding: 10px 3px;
   border: 1px solid lightgray;
-  font-size: .8em;
+  font-size: 0.8em;
 }
-
 table th:nth-child(1),
 table td:nth-child(1) {
   width: 30%;
 }
-
 table th:nth-child(2),
 table td:nth-child(2) {
   width: 35%;
 }
-
 table th:nth-child(3),
 table td:nth-child(3) {
   width: 10%;
 }
-
 table th:nth-child(4),
 table td:nth-child(4) {
   width: 25%;
@@ -39,13 +34,11 @@ table td:nth-child(4) {
   margin-top: 10px;
   padding: 20px;
 }
-
 .panel__footer .clear-history {
   font-size: 14px;
   text-decoration: none;
-  background-color: #c02f2f;
+  background-color: rgb(192, 47, 47);
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
-}
-/*# sourceMappingURL=history.css.map */
+}/*# sourceMappingURL=history.css.map */

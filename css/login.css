@@ -1,32 +1,25 @@
 .login-panel {
-  border: 1px solid #26a3f0;
-  -webkit-box-shadow: 5px 5px 25px -15px darkgrey;
-          box-shadow: 5px 5px 25px -15px darkgrey;
+  border: 1px solid rgb(38, 163, 240);
+  box-shadow: 5px 5px 25px -15px darkgrey;
 }
-
 .login-panel .login-panel__heading {
-  background-color: #26a3f0;
+  background-color: rgb(38, 163, 240);
   min-height: 60px;
   padding: 6px 0;
 }
-
 .login-panel .login-panel__heading h1 {
   line-height: 2;
   margin: 0;
   color: #fff;
 }
-
 .login-panel .login-panel__body {
   background-color: #fff;
   padding: 20px;
 }
-
 .login-panel .login-panel__body #demo-login {
   background-color: darkcyan;
   padding: 15px 20px;
 }
-
 .login-panel .login-panel__body #demo-login:hover, .login-panel .login-panel__body #demo-login:focus {
   background-color: rgba(0, 139, 139, 0.7);
-}
-/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=login.css.map */
